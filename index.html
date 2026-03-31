@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stealth Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stealth-wrapper">
+        <div class="header-bar">
+            <span class="live-clock" id="live-clock">00:00:00</span>
+            <span class="status-tag">33 DAYS TO NEET</span>
+        </div>
+
+        <div class="main-card">
+            <div class="target-header">SET YOUR FOCUS GOAL</div>
+            
+            <div class="input-zone" id="input-zone">
+                <input type="number" id="custom-min" placeholder="Minutes" min="1" max="300">
+                <button class="btn-set" onclick="setCustomTime()">SET TIME</button>
+            </div>
+
+            <div class="timer-main" id="timer">00:00:00</div>
+
+            <div class="visual-area">
+                <div class="candle-container">
+                    <div id="flame-group" class="hidden">
+                        <div class="flame-core"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle-body" id="candle">
+                        <div class="wax-top"></div>
+                    </div>
+                    <div class="wax-pool" id="wax-pool"></div>
+                </div>
+            </div>
+
+            <div class="action-zone">
+                <button class="btn-primary" id="start-btn" onclick="startTimer()" disabled>ACTIVATE</button>
+                <button class="btn-secondary" onclick="resetTimer()">RESET</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
